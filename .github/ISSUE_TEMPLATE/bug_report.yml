@@ -1,0 +1,41 @@
+name: Bug report
+description: Something in these packages behaves differently from what the docs say
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing. Two things before you start:
+
+        - **Security issues do not go here.** Follow [SECURITY.md](https://github.com/mimu-sh/ownable/blob/main/SECURITY.md) instead.
+        - **Please keep live deployments out of this issue** — no site names or URLs, no customer
+          or order data, no keys or webhook secrets. Reproduce it with made-up values.
+  - type: input
+    id: package
+    attributes:
+      label: Package and version
+      placeholder: "@mimu-sh/ownable-payments 0.1.1"
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you expected, and what you got instead.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction
+      description: >
+        The smallest code that shows it, with invented values. A failing test against this repo is
+        the ideal form. This will be rendered as TypeScript, no backticks needed.
+      render: typescript
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      placeholder: "Node 22.14, pnpm 10.15, macOS"

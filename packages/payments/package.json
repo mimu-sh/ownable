@@ -1,0 +1,62 @@
+{
+  "name": "@mimu-sh/ownable-payments",
+  "version": "0.1.1",
+  "description": "Provider-agnostic payment adapters for contested-ownership sites, with a Dodo Payments implementation and a retry-safe failure classifier.",
+  "keywords": [
+    "ownable",
+    "payments",
+    "dodo-payments",
+    "webhooks",
+    "checkout",
+    "typescript"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "NOTICE",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "homepage": "https://github.com/mimu-sh/ownable/tree/main/packages/payments#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mimu-sh/ownable.git",
+    "directory": "packages/payments"
+  },
+  "bugs": {
+    "url": "https://github.com/mimu-sh/ownable/issues"
+  },
+  "author": "mimu.sh",
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "tsup",
+    "attw": "attw --pack ."
+  },
+  "dependencies": {
+    "@mimu-sh/ownable-core": "workspace:*",
+    "standardwebhooks": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.1"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

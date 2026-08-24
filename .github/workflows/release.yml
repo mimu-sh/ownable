@@ -1,0 +1,33 @@
+name: Release
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  # Required for npm provenance: the OIDC token is what signs the attestation.
+  id-token: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          registry-url: https://registry.npmjs.org
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm -r build
+      - run: pnpm vitest run
+      - uses: changesets/action@v1
+        with:
+          publish: pnpm release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          # publishConfig.provenance is honoured by npm; pnpm reads the config
+          # from the environment. Set both so either publisher attests.
+          NPM_CONFIG_PROVENANCE: true

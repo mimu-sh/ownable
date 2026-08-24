@@ -1,0 +1,37 @@
+name: Feature request
+description: Propose new behaviour or an API change
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Worth reading **Status** in the [README](https://github.com/mimu-sh/ownable#status)
+        first — storage, inventory, auth, and idempotency are deliberately out of scope, so
+        proposals there will likely be declined however good they are.
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What you are trying to do, and where the current API gets in the way.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you would like instead
+      description: A sketch of the API is more useful than a description of it.
+      render: typescript
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What you tried instead
+      description: Workarounds in your own code, and why they are not enough.
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - label: This needs to see something only my application knows (my database, my users, my environment)
+        - label: I would be willing to open a pull request for this

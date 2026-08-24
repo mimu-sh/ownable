@@ -1,0 +1,10 @@
+node_modules
+dist
+*.tgz
+.DS_Store
+.superpowers/
+
+# Never commit local credentials. This repo is public.
+.env
+.env.*
+!.env.example

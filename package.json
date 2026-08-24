@@ -1,0 +1,32 @@
+{
+  "name": "ownable",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.15.0",
+  "scripts": {
+    "build": "pnpm -r build",
+    "test": "vitest run",
+    "typecheck": "pnpm -r build && pnpm -r exec tsc --noEmit",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "pnpm -r build && changeset publish"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.5",
+    "@changesets/cli": "^3.0.1",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.11"
+  },
+  "description": "Building blocks for contested-ownership sites: pure pricing rules and provider-agnostic payments.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mimu-sh/ownable.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mimu-sh/ownable/issues"
+  },
+  "homepage": "https://github.com/mimu-sh/ownable#readme",
+  "author": "mimu.sh"
+}

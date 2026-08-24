@@ -1,0 +1,56 @@
+{
+  "name": "@mimu-sh/ownable-core",
+  "version": "0.1.1",
+  "description": "Pure economics for contested-ownership sites: floor prices, take-over pricing, and slugs. Zero dependencies, no I/O, no clock.",
+  "keywords": [
+    "ownable",
+    "pricing",
+    "takeover",
+    "harberger",
+    "ecommerce",
+    "slugify",
+    "typescript"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "NOTICE",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "homepage": "https://github.com/mimu-sh/ownable/tree/main/packages/core#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mimu-sh/ownable.git",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/mimu-sh/ownable/issues"
+  },
+  "author": "mimu.sh",
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "tsup",
+    "attw": "attw --pack ."
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}
