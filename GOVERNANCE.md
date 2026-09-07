@@ -5,7 +5,7 @@ cost more than it protects.
 
 ## Who decides
 
-[@davidstrouk](https://github.com/davidstrouk) is the maintainer and has the final say on scope,
+[@mimu-sh](https://github.com/mimu-sh) is the maintainer and has the final say on scope,
 API design, and releases. There is no committee, no voting, and no formal membership.
 
 ## How decisions get made

@@ -16,7 +16,7 @@ fixes; there are no backports to older `0.x` releases.
 
 Report it privately through GitHub:
 [**Report a vulnerability**](https://github.com/mimu-sh/ownable/security/advisories/new). If you
-cannot use GitHub Security Advisories, email **davidstrouk@gmail.com** with `ownable security` in
+cannot use GitHub Security Advisories, email **hello@mimu.sh** with `ownable security` in
 the subject line.
 
 Useful things to include: the affected package and version, what an attacker gains, and the
